@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    xmlns:opencv="http://schemas.android.com/apk/res-auto"-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2AEC08"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/startactivity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/start_reset_button"
+            android:layout_width="105dp"
+            android:layout_height="66dp"
+            android:background="#80E91E63"
+            android:rotation="-90"
+            android:text="다시 측정"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/start_button"
+            app:layout_constraintEnd_toEndOf="@+id/start_button"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="@+id/start_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.323" />
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="105dp"
+            android:layout_height="66dp"
+            android:background="#8030EC37"
+            android:rotation="-90"
+            android:text="누르기"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.945"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.798" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/start_tv"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:background="#00000000"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
+    <!--        android:visibility="gone" -->
+<!--        opencv:camera_id="any"-->

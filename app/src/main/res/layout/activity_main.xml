@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/heart_button"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="#00000000"
+            android:padding="0sp"
+
+            android:rotation="-90"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart_no_love"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            opencv:layout_constraintDimensionRatio="1"
+            opencv:layout_constraintEnd_toEndOf="parent"
+            opencv:layout_constraintHorizontal_bias="0.113"
+            opencv:layout_constraintStart_toStartOf="parent"
+            opencv:layout_constraintTop_toTopOf="parent"
+            opencv:layout_constraintVertical_bias="0.498" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:rotation="-90"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            opencv:layout_constraintDimensionRatio="1"
+            opencv:layout_constraintEnd_toEndOf="parent"
+            opencv:layout_constraintHorizontal_bias="0.0"
+            opencv:layout_constraintStart_toStartOf="parent"
+            opencv:layout_constraintTop_toTopOf="parent"
+            opencv:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/bar_button"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:background="#FFEB3B"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
